@@ -264,11 +264,6 @@ deps:
     update_tags_from_env_with_prefix:
       _path.:
         - CM_ENV_NVMITTEN_DOCKER_WHEEL_PATH
-    enable_if_env:
-      CM_RUN_STATE_DOCKER:
-        - 'yes'
-        - True
-        - 'True'
     skip_if_env:
       CM_SKIP_NVMITTEN:
         - 'yes'
@@ -278,6 +273,10 @@ deps:
   - tags: get,nvidia,mitten
     skip_if_env:
       CM_RUN_STATE_DOCKER:
+        - 'yes'
+        - True
+        - 'True'
+      CM_SKIP_NVMITTEN:
         - 'yes'
         - True
         - 'True'
