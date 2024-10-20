@@ -682,7 +682,7 @@ variations:
       model
     env:
       CM_MODEL: stable-diffusion-xl
-      CM_MLPERF_INFERENCE_TEST_QPS: "0.05"
+      CM_MLPERF_INFERENCE_TEST_QPS: "5"
     default_variations:
       precision: float32
     add_deps_recursive:
