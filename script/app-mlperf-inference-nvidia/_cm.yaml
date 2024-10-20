@@ -269,10 +269,18 @@ deps:
         - 'yes'
         - True
         - 'True'
+      CM_SKIP_NVMITTEN:
+        - 'no'
+        - False
+        - 'False'
 
   - tags: get,nvidia,mitten
-    skip_if_env:
+    skip_if_any_env:
       CM_RUN_STATE_DOCKER:
+        - 'yes'
+        - True
+        - 'True'
+      CM_SKIP_NVMITTEN:
         - 'yes'
         - True
         - 'True'
