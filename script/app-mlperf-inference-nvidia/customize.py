@@ -355,8 +355,8 @@ def preprocess(i):
             run_config += f" --dla_inference_streams={dla_inference_streams}"
 
         gpu_batch_size = env.get('CM_MLPERF_NVIDIA_HARNESS_GPU_BATCH_SIZE')
-        if gpu_batch_size:
-            run_config += f" --gpu_batch_size={gpu_batch_size}"
+        # if gpu_batch_size:
+            # run_config += f" --gpu_batch_size={gpu_batch_size}"
 
         dla_batch_size = env.get('CM_MLPERF_NVIDIA_HARNESS_DLA_BATCH_SIZE')
         if dla_batch_size:
