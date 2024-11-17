@@ -330,9 +330,9 @@ def preprocess(i):
         if user_conf_path and env['CM_MLPERF_NVIDIA_HARNESS_RUN_MODE'] == "run_harness":
             run_config += f" --user_conf_path={user_conf_path}"
 
-        mlperf_conf_path = env.get('CM_MLPERF_INFERENCE_CONF_PATH')
-        if mlperf_conf_path and env['CM_MLPERF_NVIDIA_HARNESS_RUN_MODE'] == "run_harness":
-            run_config += f" --mlperf_conf_path={mlperf_conf_path}"
+        # mlperf_conf_path = env.get('CM_MLPERF_INFERENCE_CONF_PATH')
+        # if mlperf_conf_path and env['CM_MLPERF_NVIDIA_HARNESS_RUN_MODE'] == "run_harness":
+        #     run_config += f" --mlperf_conf_path={mlperf_conf_path}"
 
         power_setting = env.get('CM_MLPERF_NVIDIA_HARNESS_POWER_SETTING')
         if power_setting and env['CM_MLPERF_NVIDIA_HARNESS_RUN_MODE'] == "run_harness":
