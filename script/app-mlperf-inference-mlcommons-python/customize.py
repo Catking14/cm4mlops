@@ -73,7 +73,8 @@ def preprocess(i):
     if "llama2-70b" in env['CM_MODEL'] or "mixtral-8x7b" in env["CM_MODEL"]:
         env['CM_MLPERF_LOADGEN_EXTRA_OPTIONS'] +=  " --mlperf-conf " + x+ env['CM_MLPERF_CONF'] + x
     else:
-        env['CM_MLPERF_LOADGEN_EXTRA_OPTIONS'] +=  " --mlperf_conf "+ x + env['CM_MLPERF_CONF'] + x
+        # env['CM_MLPERF_LOADGEN_EXTRA_OPTIONS'] +=  " --mlperf_conf "+ x + env['CM_MLPERF_CONF'] + x
+        pass
 
     if env.get('CM_NETWORK_LOADGEN', '') != "lon" and env.get('CM_MLPERF_INFERENCE_API_SERVER','')=='' and "llama2-70b" not in env['CM_MODEL']:
         env['MODEL_DIR'] = env.get('CM_ML_MODEL_PATH')
