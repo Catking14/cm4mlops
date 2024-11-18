@@ -153,7 +153,7 @@ def get_result_string(version, model, scenario, result_path, has_power, sub_res,
     result = {}
 
 
-    performance_result = checker.get_performance_metric(config, mlperf_model, performance_path, scenario, None, None, has_power)
+    performance_result = checker.get_performance_metric(config, mlperf_model, performance_path, scenario)
     if "stream" in scenario.lower():
         performance_result_ = performance_result / 1000000 #convert to milliseconds
     else:
